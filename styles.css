@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    background: url(/img/Background-image.png);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20vh auto;
+    background-color: #F6FBF9;
+    width: 30%;
+    border-radius: 49px;
+    padding: 20px;
+    align-items: center;
+}
+
+.titulo {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 72px;
+    text-align: center;
+}
+
+.titulo__secundario {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.email__box {
+    margin: 10px;
+    box-sizing: border-box;
+    width: 430px;
+    height: 54px;
+    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15.3407px;
+    padding: 10px;
+
+}
+
+.password__box {
+    margin-top: 10px;
+    box-sizing: border-box;
+    width: 430px;
+    height: 54px;
+    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15.3407px;
+    padding: 10px;
+}
+
+.submit__box {
+    margin-top: 2em;
+    width: 391.19px;
+    height: 60px;
+    background: #84C7AE;
+    border-radius: 23.011px;
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.cabecalho {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
