@@ -1,7 +1,7 @@
 const campoEmail = document.querySelector(".input_email");
 const campoSenha = document.querySelector(".input_senha");
 const botaoEnviar = document.querySelector(".buttonSubmit__box");
-const mensagemSnackbar = document.getElementById("snackbar");
+const mensagem = document.getElementById("snackbar");
 
 const email = "gbennemann@hotmail.com";
 const senha = "12345";
@@ -46,8 +46,8 @@ botaoEnviar.addEventListener("click", (event) => {
 })
 
 function toastBar(texto){
-    mensagemSnackbar.innerHTML = texto;
-    mensagemSnackbar.className = "show"
+    mensagem.innerHTML = texto;
+    mensagem.className = "show";
     setTimeout(()=>{ mensagem.className = mensagem.className.replace("show", ""); }, 1000);
 }
 
