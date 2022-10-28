@@ -4,13 +4,49 @@
 }
 
 body {
-    background: url(/img/Background-image.png);
+    font-family: 'Karla';
+    background: #84C7AE;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-form {
+body::after {
+    z-index: -1;
+   content: '';
+   position: absolute;
+   top: -400px;
+   left: -200px;
+   width: 800px;
+   height: 750px;
+   
+   background: #C1E3D6;
+   border-radius: 160px;
+   transform: rotate(45deg);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+body::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: -400px;
+    right: -200px;
+    width: 800px;
+    height: 750px;
+    background: #C1E3D6;
+    border-radius: 160px;
+    transform: rotate(-45deg);
+
+}
+ 
+.form {
     display: flex;
     flex-direction: column;
-    margin: 20vh auto;
     background-color: #F6FBF9;
     width: 30%;
     border-radius: 49px;
@@ -19,58 +55,129 @@ form {
 }
 
 .titulo {
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 700;
     font-size: 35px;
-    line-height: 72px;
-    text-align: center;
+    font-weight: 700;
+    padding-top: 1.5em;
+    color: #212B27;
 }
 
 .titulo__secundario {
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
     text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #32403B;
+    margin: .5em 4em 2em 4em;
 }
 
-.email__box {
-    margin: 10px;
-    box-sizing: border-box;
-    width: 430px;
-    height: 54px;
-    border: 1.53407px solid rgba(0, 0, 0, 0.1);
-    border-radius: 15.3407px;
-    padding: 10px;
-
+.descricao__form {
+    font-size: 16px;
+    font-weight: 400;
+    color: #32403B;
 }
 
-.password__box {
-    margin-top: 10px;
-    box-sizing: border-box;
-    width: 430px;
-    height: 54px;
-    border: 1.53407px solid rgba(0, 0, 0, 0.1);
-    border-radius: 15.3407px;
-    padding: 10px;
+.input__form {
+    background-color: #FFFFFF;
+    padding: 1.5em 1em;
+    margin: .5em auto;
+    width: 80%;
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
 }
 
-.submit__box {
-    margin-top: 2em;
+.input__form::placeholder {
+    color: var(--cinza);
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 1em;
+}
+
+input:invalid {
+    border-color: red;
+  }
+
+.buttonSubmit__box {
+    margin-top: 1em;
     width: 391.19px;
     height: 60px;
     background: #84C7AE;
     border-radius: 23.011px;
     color: #FFFFFF;
     font-size: 22px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
-.cabecalho {
-    font-family: 'Karla';
+.buttonSubmit__box:hover {
+    opacity: 1;
+}
+
+.cabecalho , .link{
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    padding: .5em 0 3.5em 0;
+    color: #32403B;
+}
+
+@media screen and (max-width:720px){
+    .form {
+        width: 95%;
+        
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+
+    body::after {
+        display: none;
+    }
+
+    body::before {
+        display: none;
+    }
+}
+
+@media screen and (min-width:720px){
+    .form {
+        width: 50%;
+    }
+    
+    body {
+        overflow-y: scroll;
+    }
+
+    body::after {
+        display: block;
+     }
+     
+     body::before {
+         display: block;
+     }
+
+}
+
+@media screen and (min-width:1024px){
+    .form {
+        width: 40%;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+}
+
+@media screen and (min-width:1400px){
+    .form {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:1728px){
+    .form {
+        width: 25%;
+    }
 }
